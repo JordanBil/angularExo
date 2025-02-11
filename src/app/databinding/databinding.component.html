@@ -1,0 +1,21 @@
+<div class="p-4 bg-gray-200">
+    <h2>Data Binding Example</h2>
+
+    <!-- Input lié avec [(ngModel)] -->
+    <input 
+        type="text" 
+        [(ngModel)]="userInput" 
+        placeholder="Tapez quelque chose..." 
+        class="p-2 border rounded w-full my-2">
+
+    <!-- Affichage du texte en direct -->
+    <p>Vous avez tapé : <strong>{{ userInput }}</strong></p>
+
+    <!-- Bouton de reset, désactivé si l'input est vide -->
+    <button 
+        (click)="resetInput()" 
+        [disabled]="!userInput" 
+        class="px-4 py-2 bg-red-500 text-white rounded">
+        Reset
+    </button>
+</div>
