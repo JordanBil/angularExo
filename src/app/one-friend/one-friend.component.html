@@ -1,18 +1,18 @@
-<div class="w-96 m-4 p-4 bg-blue-200 flex flex-col">
-    <img  class="w-48 h-48 item-center" [src]=uneData alt="Photo de profil">
-    <h2>{{Utilisateur}}</h2>
-    <h3>status: {{Status}}</h3>
-    <p>Age : {{getAge()}}</p>
-    <p>Bio : {{Bio}}</p>
+<div [ngStyle]="{backgroundColor: switchBackground()}" class="w-96 m-4 p-4 bg-blue-200 flex flex-col items-center rounded-xl">
+    <img  class="w-48 h-48 rounded-2xl" [src]=uneData alt="Photo de profil">
+    <h2 [ngClass]="getColor()"><strong>{{Utilisateur}}</strong></h2>
+    <h3 class=" mx-4 self-start">status: {{Status}}</h3>
+    <p  class=" mx-4 self-start">Age : {{getAge()}}</p>
+    <p  class=" mx-4 self-start">Bio : <em>{{Bio}}</em></p>
     <span>_______________________________________________________</span>
-    <h4>Les passions de Steven</h4>
-    <ul>
+    <h4  class=" mx-4 self-start">Les passions de Steven</h4>
+    <ul  class=" mx-4 self-start my-2">
         <li>{{passion[0]}}</li>
         <li>{{passion[1]}}</li>
         <li>{{passion[2]}}</li>
 </ul>
 <span>_______________________________________________________</span>
-<p>Réputation : {{ResultReputation}}</p>
+<p  class=" mx-4 self-start">Réputation : {{ResultReputation}}</p>
 <span>_______________________________________________________</span>
-<p>Xss ? {{Xss}}</p>
+<p  class=" mx-4 self-start">Xss ? {{Xss}}</p>
 </div>

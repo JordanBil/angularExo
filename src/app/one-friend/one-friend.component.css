@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.amiOn{
+    color: chartreuse;
+  }
+  .amiOff{
+    color: white;
+  }

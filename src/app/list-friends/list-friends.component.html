@@ -1,26 +1,13 @@
-<div class="w-4/6 p-4 bg-blue-200">
-
-
-    <app-one-friend></app-one-friend>
-    <!-- Input de saisie de l'ami -->
-    <input 
-        type="text" 
-        #inputAmi
-        (input)="onInputChange($event)" 
-        placeholder="Entrez un nom" 
-        class="p-2 border rounded w-full my-2">
-
-    <!-- Affichage en direct de la saisie -->
-    <p>Vous êtes en train de taper : <strong>{{ saisieAmi }}</strong></p>
-
-    <!-- Bouton d'ajout -->
-    <button (click)="ajouterAmi(inputAmi)" class="px-4 py-2 bg-green-500 text-white rounded">
-        Ajouter Ami
-    </button>
-
-    <!-- Message d'ajout -->
-    <p>{{ messageAmi }}</p>
-
-    
-    
+<h1>ListFriends component (Bind) + conditionnal rendering (*ngif)</h1>
+<input (keyup)="capterEvent($event)" type="text" placeholder="Rechercher un ami..">
+<button (click)="ajouterAmi()"  class=" cursor-pointer  m-5 btn-primary">
+Ajouter ami
+</button>
+<!-- <p class="mx-4">{{dataInput}}</p> -->
+<p class="mx-4 text-black-500" *ngIf="message;else elseBlock">{{dataInput}}</p>
+<ng-template #elseBlock>
+    <p class="mx-4 text-green-500">Utilisateur {{dataInput}} ajouté avec succès</p>
+</ng-template>
+<div *ngFor="let friend of listFriendsTab">
+<app-one-friend></app-one-friend>
 </div>
