@@ -1,0 +1,19 @@
+<div class="p-4 bg-gray-100">
+    <h1 class="text-center text-2xl font-bold">Blog Control Center</h1>
+
+    <!-- Composant d'ajout d'articles -->
+    <app-add-article 
+        (articleCreated)="onArticleAdded($event)">
+        <!-- (brouillonCreated)="onBrouillonCreated($event)">  -->
+    </app-add-article>
+
+    <h2 class="text-lg font-semibold mt-4">Articles publiés</h2>
+    <div *ngFor="let article of articles">
+        <app-article-element [article]="article"></app-article-element>
+    </div>
+
+    <!-- <h2 class="text-lg font-semibold mt-4">Brouillons</h2>
+    <div *ngFor="let brouillon of brouillons">
+        <app-article-element [article]="brouillon"></app-article-element>
+    </div> -->
+</div>
