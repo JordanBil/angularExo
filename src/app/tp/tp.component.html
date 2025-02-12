@@ -1,0 +1,13 @@
+<button (click)="toggleDetails()" class="px-4 py-2 bg-green-500 text-white rounded">
+    {{ showDetails ? 'Cacher détails' : 'Afficher détails' }}
+</button>
+
+<p *ngIf="showDetails">Tu me vois , tu me vois plus, tu me vois plus, tu me vois !</p>
+<ul class="mt-4">
+    <li *ngFor="let nbr of clickNbrTab; let i = index"
+        [ngClass]="{'text-white': i >= 4}" 
+        [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'white'}"
+        class="p-2 border-b border-gray-300">
+        Clic n°= {{i+1}}
+    </li>
+</ul>
