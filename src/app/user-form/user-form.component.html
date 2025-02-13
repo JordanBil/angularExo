@@ -1,0 +1,25 @@
+<form (ngSubmit)="submitForm()" class="bg-white p-4 rounded-md shadow-md space-y-3">
+    <h2 class="text-xl font-semibold mb-2">Modifier le Profil</h2>
+
+    <div>
+        <label class="block font-medium">Nom</label>
+        <input [(ngModel)]="updatedUser.name" name="userName" type="text"
+               class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+        <label class="block font-medium">Email</label>
+        <input [(ngModel)]="updatedUser.email" name="userEmail" type="email"
+               class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+        <label class="block font-medium">Rôle</label>
+        <input [(ngModel)]="updatedUser.role" name="userRole" type="text"
+               class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+        Mettre à jour
+    </button>
+</form>

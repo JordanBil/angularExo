@@ -1,0 +1,7 @@
+<div class="container mx-auto p-6 max-w-md bg-gray-100 shadow-lg rounded-lg">
+    <h1 class="text-2xl font-semibold text-center mb-6">Gestion du Profil</h1>
+   
+    <app-user-details [user]="user"></app-user-details>
+
+    <app-user-form [user]="user" (userUpdated)="updateUser($event)"></app-user-form>
+</div>
